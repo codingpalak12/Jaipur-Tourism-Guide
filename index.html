@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelTales Jaipur</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700;800&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- CSS-ONLY CONTROLS - REPLACES JS -->
+  <input type="checkbox" id="theme">
+  <input type="radio" name="cat" id="all" checked>
+  <input type="radio" name="cat" id="fort">
+  <input type="radio" name="cat" id="palace">
+  <input type="radio" name="cat" id="hidden">
+  <input type="radio" name="cat" id="bazaar">
+  <input type="radio" name="cat" id="temple">
+
+  <!---------------- NAV ------------------>
+  <nav>
+    <div class="logo">TRAVEL<span style="color: #FF3CAC">TALES</span> JAIPUR</div>
+    <label for="theme" class="theme-btn" id="label">Dark</label>
+  </nav>
+
+  <!----------------- HERO ---------------->
+  <header class="hero">
+    <div>
+      <br>
+      <h1><span style="font-family: 'Merienda', cursive; font-size: clamp(40px,7vw,80px); line-height: 0.9">Padharo</span><br><span style="font-family:'Philosopher', serif;"><span class="gradient-text2">Mhare</span> <span class="gradient-text">Desh.</span></span></h1><br>
+      <p style="font-size: 20px; line-height: 40px;"><span>Jaipur is not just a city, it's a <b>feeling</b> ~<br><br>Pink is not just a color here - it's <b>hospitality.</b><br><span>Padharo Mhare Desh" is not just a phrase - it's a <b>promise.</span></p>
+    </div>
+    <div class="hero-img">
+      <img src="images/welcome.png">
+    </div>
+  </header>
+
+  <!------------ FILTERS -------------->
+  <div class="filters">
+    <label for="all">All</label>
+    <label for="fort">Forts</label>
+    <label for="palace">Palaces</label>
+    <label for="hidden">Hidden</label>
+    <label for="bazaar">Bazaars</label>
+    <label for="temple">Temples</label>
+  </div>
+
+  <!----------------- PLACE CARDS --------------->
+  <div class="grid">
+
+    <!--------------- 1. Hawa Mahal -------------->
+    <div class="card" data-c="palace">
+      <div class="cimg">
+        <span class="tag">ICONIC</span>
+        <img src="images/Hawa-Mahal.webp">
+      </div>
+      <div class="body">
+        <h3>Hawa Mahal</h3>
+        <p class="tale">1799 - 953 jharokhas for royal ladies. Natural AC.</p>
+        <div class="meta">
+          <div>📍 Distance<b>0 km</b></div>
+          <div>🎟️ Ticket<b>₹200/₹500</b></div>
+          <div>⏰ Time<b>9AM-5PM</b></div>
+          <div>💡 Tip<b>Go early</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Hawa+Mahal+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-------------- 2. Amer Fort ----------------->
+    <div class="card" data-c="fort">
+      <div class="cimg">
+        <span class="tag">FORT</span>
+        <img src="images/Amer-Fort.webp">
+      </div>
+      <div class="body">
+        <h3>Amer Fort</h3>
+        <p class="tale">Never conquered. 1 candle = 1000 mirrors.</p>
+        <div class="meta">
+          <div>📍 Distance<b>11 km</b></div>
+          <div>🎟️ Ticket<b>₹200/₹500</b></div>
+          <div>⏰ Time<b>8AM-5:30PM</b></div>
+          <div>💡 Tip<b>Jeep ride</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Amer+Fort+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Amber_Fort" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!------------- 3. City Palace ------------->
+    <div class="card" data-c="palace">
+      <div class="cimg">
+        <span class="tag">ROYAL</span>
+        <img src="images/City-Palace.webp">
+      </div>
+      <div class="body">
+        <h3>City Palace</h3>
+        <p class="tale">Home of royal family. Silver vessels.</p>
+        <div class="meta">
+          <div>📍 Distance<b>0.5 km</b></div>
+          <div>🎟️ Ticket<b>₹250/₹700</b></div>
+          <div>⏰ Time<b>9:30AM-5PM</b></div>
+          <div>💡 Tip<b>Camera extra</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=City+Palace+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/City_Palace,_Jaipur" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------- 4. Jal Mahal ------------------>
+    <div class="card" data-c="hidden">
+      <div class="cimg">
+        <span class="tag">LAKE VIEW</span>
+        <img src="images/Jal-Mahal.jpg">
+      </div>
+      <div class="body">
+        <h3>Jal Mahal</h3>
+        <p class="tale">4 floors underwater when full. Sunrise best.</p>
+        <div class="meta">
+          <div>📍 Distance<b>6.5 km</b></div>
+          <div>🎟️ Ticket<b>Free View</b></div>
+          <div>⏰ Time<b>Sunrise</b></div>
+          <div>💡 Tip<b>Sunrise</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Jal+Mahal+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Jal_Mahal" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!---------------- 5. Nahargarh Fort ----------------->
+    <div class="card" data-c="fort">
+      <div class="cimg">
+        <span class="tag">SUNSET</span>
+        <img src="images/Nahargarh-Fort.jpg">
+      </div>
+      <div class="body">
+        <h3>Nahargarh Fort</h3>
+        <p class="tale">Best sunset. Rang De Basanti climax.</p>
+        <div class="meta">
+          <div>📍 Distance<b>12 km</b></div>
+          <div>🎟️ Ticket<b>₹100/₹300</b></div>
+          <div>⏰ Time<b>10AM-5:30PM</b></div>
+          <div>💡 Tip<b>Chai</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Nahargarh+Fort+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Nahargarh_Fort" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- 6. Jaigarh Fort ----------------->
+    <div class="card" data-c="fort">
+      <div class="cimg">
+        <span class="tag">CANNON</span>
+        <img src="images/Jaigarh-Fort.jpg">
+      </div>
+      <div class="body">
+        <h3>Jaigarh Fort</h3>
+        <p class="tale">World's largest cannon. Shot 35km.</p>
+        <div class="meta">
+          <div>📍 Distance<b>13 km</b></div>
+          <div>🎟️ Ticket<b>₹150/₹400</b></div>
+          <div>⏰ Time<b>9AM-4:45PM</b></div>
+          <div>💡 Tip<b>Cannon</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Jaigarh+Fort+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Jaigarh_Fort" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!---------------- 7. Jantar Mantar --------------->
+    <div class="card" data-c="palace">
+      <div class="cimg">
+        <span class="tag">UNESCO</span>
+        <img src="images/Jantar-Mantar.jpg">
+      </div>
+      <div class="body">
+        <h3>Jantar Mantar</h3>
+        <p class="tale">Largest stone sundial, 2 sec accuracy.</p>
+        <div class="meta">
+          <div>📍 Distance<b>0.3 km</b></div>
+          <div>🎟️ Ticket<b>₹100/₹300</b></div>
+          <div>⏰ Time<b>9AM-5PM</b></div>
+          <div>💡 Tip<b>Guide</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Jantar+Mantar+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Jantar_Mantar" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-------------- 8. Johari Bazaar ----------------->
+    <div class="card" data-c="bazaar">
+      <div class="cimg">
+        <span class="tag">BAZAAR</span>
+        <img src="images/Johari-Bazaar.webp">
+      </div>
+      <div class="body">
+        <h3>Johari Bazaar</h3>
+        <p class="tale">200-yr shops. Lac bangles live.</p>
+        <div class="meta">
+          <div>📍 Distance<b>0.2 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>10AM-11PM</b></div>
+          <div>💡 Tip<b>Bargain</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Johari+Bazaar+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Johri_Bazar_(Rajasthan_Assembly_constituency)" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!------------------ 9. Albert Hall ------------------->
+    <div class="card" data-c="hidden">
+      <div class="cimg">
+        <span class="tag">MUSEUM</span>
+        <img src="images/Albert-Hall-Museum.jpg">
+      </div>
+      <div class="body">
+        <h3>Albert Hall</h3>
+        <p class="tale">Oldest museum. Egyptian mummy.</p>
+        <div class="meta">
+          <div>📍 Distance<b>4 km</b></div>
+          <div>🎟️ Ticket<b>₹50/₹300</b></div>
+          <div>⏰ Time<b>9AM-5PM</b></div>
+          <div>💡 Tip<b>Night view</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Albert+Hall+Museum+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Albert_Hall_Museum" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-------------- 10. Patrika Gate ----------------->
+    <div class="card" data-c="hidden">
+      <div class="cimg">
+        <span class="tag">PHOTOGENIC</span>
+        <img src="images/Patrika-Gate.png">
+      </div>
+      <div class="body">
+        <h3>Patrika Gate</h3>
+        <p class="tale">Most colourful gate. Every arch story.</p>
+        <div class="meta">
+          <div>📍 Distance<b>7.5 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>24H</b></div>
+          <div>💡 Tip<b>Morning</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Patrika+Gate+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Jawahar_Circle" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!---------------- 11. Panna Meena Kund ----------------->
+    <div class="card" data-c="hidden">
+      <div class="cimg">
+        <span class="tag">STEPWELL</span>
+        <img src="images/Panna-Meena-Kund.jpg">
+      </div>
+      <div class="body">
+        <h3>Panna Meena Kund</h3>
+        <p class="tale">Symmetrical stepwell near Amer.</p>
+        <div class="meta">
+          <div>📍 Distance<b>10 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>6AM-6PM</b></div>
+          <div>💡 Tip<b>Ask locals</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Panna+Meena+Ka+Kund+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Stepwell" target"_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- 12. Galtaji Temple ---------------->
+    <div class="card" data-c="temple">
+      <div class="cimg">
+        <span class="tag">MONKEY</span>
+        <img src="images/Galtaji-Temple.jpg">
+      </div>
+      <div class="body">
+        <h3>Galtaji Temple</h3>
+        <p class="tale">Natural springs, monkeys.</p>
+        <div class="meta">
+          <div>📍 Distance<b>12 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>5AM-9PM</b></div>
+          <div>💡 Tip<b>Hide food</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Galtaji+Temple+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Galtaji" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- 13. Birla Mandir --------------->
+    <div class="card" data-c="temple">
+      <div class="cimg">
+        <span class="tag">MARBLE</span>
+        <img src="images/Birla-Mandir.webp">
+      </div>
+      <div class="body">
+        <h3>Birla Mandir</h3>
+        <p class="tale">White marble. Glows at night.</p>
+        <div class="meta">
+          <div>📍 Distance<b>6 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>6AM-9PM</b></div>
+          <div>💡 Tip<b>Aarti</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Birla+Mandir+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Birla_Mandir,_Jaipur" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!------------ 14. Sisodia Rani Garden ----------->
+    <div class="card" data-c="hidden">
+      <div class="cimg">
+        <span class="tag">GARDEN</span>
+        <img src="images/Sisodiya-Rani-Garden.jpg">
+      </div>
+      <div class="body">
+        <h3>Sisodia Rani Garden</h3>
+        <p class="tale">Queen's garden 1728. Mughal paintings.</p>
+        <div class="meta">
+          <div>📍 Distance<b>8 km</b></div>
+          <div>🎟️ Ticket<b>₹50/₹100</b></div>
+          <div>⏰ Time<b>8AM-5PM</b></div>
+          <div>💡 Tip<b>Couple spot</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Sisodia+Rani+Garden+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://en.wikipedia.org/wiki/Sisodiya_Rani_Bagh" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!----------- 15. Bapu Bazaar -------------->
+    <div class="card" data-c="bazaar">
+      <div class="cimg">
+        <span class="tag">SHOPPING</span>
+        <img src="images/Bapu-Bazaar.webp">
+      </div>
+      <div class="body">
+        <h3>Bapu Bazaar</h3>
+        <p class="tale">Mojari, bedsheets. Cheaper than Johari.</p>
+        <div class="meta">
+          <div>📍 Distance<b>0.5 km</b></div>
+          <div>🎟️ Ticket<b>Free</b></div>
+          <div>⏰ Time<b>10:30PM</b></div>
+          <div>💡 Tip<b>Evening</b></div>
+        </div>
+        <div class="btns">
+          <a href="https://maps.google.com/?q=Bapu+Bazaar+Jaipur" target="_blank" class="btn bl">📍 Location</a>
+          <a href="https://www.topindianholidays.com/blog/bapu-bazar-jaipur" target="_blank" class="btn bi">Details ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--------------- FOOTER --------------------->
+  <footer>© TravelTales Jaipur • Padharo Mhare Desh • PinkCity</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+// ======== JAIPUR TOURISM GUIDE ===========
+
+// Declaring color variables
+:root {
+  --pink: #FF3CAC;
+  --yellow: #FFE600;
+  --bg: #FFFBF5;
+  --card: #fff;
+  --text: #111;
+  --muted: #6b7280;
+  --border: #00000012;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+// ---------- Dark mode ----------------
+html:has(#theme:checked) {
+  --bg: #0A0A0F;
+  --card: #14141F;
+  --text: #fff;
+  --muted: #9ca3af;
+  --border: #ffffff15;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+// Base reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  transition: 0.3s;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+}
+
+// Hidden checkbox/radio inputs that drive the theme and filters 
+input {
+  display: none;
+}
+
+// --------------- NAV ---------------------
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5%;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.theme-btn {
+  padding: 8px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: pink;
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#label:hover {
+  background-color: var(--pink);
+}
+
+// ---------------- HERO -------------------
+.hero {
+  padding: 60px 5% 76px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  background: var(--bg);
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 78px);
+  line-height: 0.9;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 12px 0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.hero-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #D92780, #F25F16, #D92780, #F25F16, #D92780, #F25F16);
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+}
+
+.gradient-text2 {
+  background: linear-gradient(180deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+}
+
+// ------------ FILTERS -------------
+
+.filters {
+  padding: 10px 5% 20px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  background: var(--bg);
+}
+
+.filters label {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+// Active filter chip 
+#all:checked ~ .filters [for="all"],
+#fort:checked ~ .filters [for="fort"],
+#palace:checked ~ .filters [for="palace"],
+#hidden:checked ~ .filters [for="hidden"],
+#bazaar:checked ~ .filters [for="bazaar"],
+#temple:checked ~ .filters [for="temple"] {
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+// -------------- CARD GRID -----------------
+.grid {
+  padding: 0 5% 60px;
+  display: grid;
+  gap: 18px;
+  background: var(--bg);
+  grid-template-columns: 1fr;
+}
+
+// ------------- RESPONSIVE STYLING -------------
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    display: flex;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 40%;
+    min-width: 150px;
+  }
+}
+
+// ----------------- CARDS ---------------------
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: gray;
+}
+
+.cimg {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  background: skyblue;
+  color: #000;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+}
+
+.tale {
+  flex: 1;
+  min-height: 58px;
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 10.5px;
+}
+
+.meta b {
+  display: block;
+  margin-top: 2px;
+  color: var(--text);
+  font-size: 11.5px;
+}
+
+// ---------------- CARD BUTTONS -------------------
+
+.btns {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn {
+  flex: 1;
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.bl {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.bi {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+// ------------- SORTING / FILTERING ---------------
+
+#fort:checked ~ .grid .card:not([data-c="fort"]),
+#palace:checked ~ .grid .card:not([data-c="palace"]),
+#hidden:checked ~ .grid .card:not([data-c="hidden"]),
+#bazaar:checked ~ .grid .card:not([data-c="bazaar"]),
+#temple:checked ~ .grid .card:not([data-c="temple"]) {
+  display: none;
+}
+
+// -------------- FOOTER -------------------
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
